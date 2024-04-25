@@ -1,6 +1,7 @@
 import Title from "./components/Title";
-import Setup from "./examples/3-post-request";
+import Setup from "./examples/5-custom-instance";
 
+// import "./axios/global"; Global Instance - Usually avoided
 function App() {
   return (
     <main>

@@ -6,11 +6,11 @@ const authFetch = axios.create({
 });
 
 // 1. Request
-axios.interceptors.request.use(
+authFetch.interceptors.request.use(
   (request) => {
     // We can add our headers
-    request.headers.common["Accept"] = "application/json";
-    console.log("*** Request Send ***");
+    request.headers["Accept"] = "application/json";
+    console.log("2. Request Send from the Interceptor");
     // Must return request
     return request;
   },
@@ -20,10 +20,10 @@ axios.interceptors.request.use(
 );
 
 // 2. Response
-axios.interceptors.request.use(
-  (request) => {
-    console.log("*** Got Response ***");
-    return request;
+authFetch.interceptors.response.use(
+  (response) => {
+    console.log("3. Response coming through the Interceptor");
+    return response;
   },
   (error) => {
     console.log(error.response);

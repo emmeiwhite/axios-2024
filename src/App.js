@@ -1,5 +1,5 @@
-import Title from "./components/Title";
-import Setup from "./examples/6-interceptors";
+import Title from './components/Title'
+import Setup from './examples/1-first-request'
 
 // import "./axios/global"; Global Instance - Usually avoided
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <Title />
       <Setup />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
